@@ -35,6 +35,7 @@ export class FormComponent implements OnInit {
   constructor(private myService: GetDataService) { }
 
   ngOnInit() {
+    console.log('Hello');
     this.myForm = new FormGroup({
       employeeID: new FormControl('', Validators.compose([ Validators.required, Validators.pattern('[M|m][1][0-9]{6}')])),
       projects: new FormControl(null,[Validators.required]),
